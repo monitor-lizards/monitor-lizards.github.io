@@ -7,11 +7,12 @@ import {
   DepthOfField,
   Bloom,
   Noise,
+  Glitch,
   Sepia,
   Vignette,
 } from '@react-three/postprocessing'
 
-import { BlendFunction, GlitchMode } from 'postprocessing'
+import { BlendFunction } from 'postprocessing'
 
 import { Html, Icosahedron, useTexture, useCubeTexture, MeshDistortMaterial } from '@react-three/drei'
 
@@ -56,7 +57,7 @@ function Instances({ material }) {
       <MainSphere material={material} />
       {initialPositions.map((pos, i) => (
         <Icosahedron
-          args={[1, 4]}
+          args={[1, 8]}
           position={[pos[0], pos[1], pos[2]]}
           material={material}
           key={i}
@@ -69,6 +70,7 @@ function Instances({ material }) {
 
 function Scene() {
   const bumpMap = useTexture('/bump.jpg')
+  // const envMap = useTexture('/bump.jpg');
   const envMap = useCubeTexture(['px.png', 'nx.png', 'py.png', 'ny.png', 'pz.png', 'nz.png'], { path: '/cube/' })
   // We use `useResource` to be able to delay rendering the spheres until the material is ready
   const [material, set] = useState()
@@ -120,6 +122,14 @@ export default function App() {
         />
         <Noise opacity={0.05} />
         <Vignette eskil={false} offset={0.1} darkness={1.07} />
+
+        <Glitch
+          delay={[13, 34]} // min and max glitch delay
+          duration={[0.5, 0.8]} // min and max glitch duration
+          strength={[0.2, 1.3]} // min and max glitch strength
+          ratio={0.77} // Threshold for strong glitches, 0 - no weak glitches, 1 - no strong glitches.
+        />
+
         <ChromaticAberration
           // blendFunction={BlendFunction.NORMAL} // blend mode
           // blendFunction={BlendFunction.SCREEN} // blend mode
