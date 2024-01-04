@@ -1,8 +1,8 @@
-/**
- * @license
- * Copyright 2010-2022 Three.js Authors
- * SPDX-License-Identifier: MIT
- */
+/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
 
 /**
  * @license React
@@ -65,8 +65,48 @@
  */
 
 /**
+ * @remix-run/router v1.14.1
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */
+
+/**
+ * React Router DOM v6.21.1
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */
+
+/**
+ * React Router v6.21.1
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */
+
+/**
  * postprocessing v6.22.0 build Sun May 30 2021
  * https://github.com/vanruesc/postprocessing
  * Copyright 2021 Raoul van Rüschen
+ * @license Zlib
+ */
+
+/**
+ * postprocessing v6.33.4 build Sat Dec 02 2023
+ * https://github.com/pmndrs/postprocessing
+ * Copyright 2015-2023 Raoul van Rüschen
  * @license Zlib
  */
