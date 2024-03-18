@@ -129,7 +129,7 @@ code {
 }
 
 .cursor__dot div:first-child {
-    /*filter: invert(1);*/
+    filter: invert(.61);
     background-color: var(--overlay-color) !important;
     /*background-color: rgba(1, 1, 1, 0.5);*/
 }
