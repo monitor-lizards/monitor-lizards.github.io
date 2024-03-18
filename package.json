@@ -1,8 +1,8 @@
 {
-  "name": "monitor-lizards",
+  "name": "monitorlizards.studio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://monitor-lizards.github.io/",
+  "homepage": "https://monitorlizards.studio/",
   "dependencies": {
     "@react-three/drei": "9.92.6",
     "@react-three/fiber": "8.15.12",
