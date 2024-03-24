@@ -13,7 +13,7 @@ import {
 } from 'react-icons/fa'
 import { socialProfiles } from '../../content_option'
 
-export const Socialicons = (params) => {
+export const SocialIcons = (params) => {
   return (
     <div className="stick_follow_icon">
       <ul>
@@ -59,7 +59,7 @@ export const Socialicons = (params) => {
           </li>
         )}
       </ul>
-      <p>Monitor Lizards</p>
+      {/*<p>Monitor Lizards</p>*/}
     </div>
   )
 }

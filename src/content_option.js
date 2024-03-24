@@ -155,7 +155,7 @@ const contactConfig = {
 }
 
 const socialProfiles = {
-  email: 'mailto:at.monitor.lizards@egmail.com',
+  email: 'mailto:nest@monitorlizards.studio',
   unreal: 'https://www.unrealengine.com/marketplace/en-US/profile/Monitor+Lizards',
   gumroad: 'https://monitorlizard.gumroad.com/',
   youtube: 'https://www.youtube.com/channel/UCCotTqi6U3vu8QR5y6gVwtw',

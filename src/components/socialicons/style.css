@@ -55,15 +55,17 @@
 
 @media only screen and (max-width: 991px) {
     .stick_follow_icon {
-        width: unset;
-        height: unset;
-        position: static;
-        margin-top: unset;
         display: flex;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        margin: auto;
         flex-direction: row-reverse;
         justify-content: center;
-        padding: 40px 0;
         align-items: center;
+        top: unset;
+        left: unset;
     }
     .stick_follow_icon p {
         top: unset;
@@ -82,6 +84,6 @@
     .stick_follow_icon ul li {
         display: inline;
         margin-bottom: 29px;
-        margin-right: 10px;
+        margin-right: 20px;
     }
 }

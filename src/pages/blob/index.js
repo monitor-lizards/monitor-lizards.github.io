@@ -111,7 +111,7 @@ export const Blob = () => {
         stencil: false,
         depth: false,
       }}>
-      <Suspense fallback={<Html center>Loading.</Html>}>
+      <Suspense fallback={<Html center>Hatching the Eggs...</Html>}>
         <Scene />
       </Suspense>
 
@@ -122,7 +122,7 @@ export const Blob = () => {
           intensity={0.77} // sepia intensity
           blendFunction={BlendFunction.SUBTRACT} // blend mode
         />
-        <Noise opacity={0.05} />
+        <Noise opacity={0.09} />
         <Vignette eskil={false} offset={0.1} darkness={1.07} />
 
         <Glitch
