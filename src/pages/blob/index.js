@@ -122,7 +122,7 @@ export const Blob = () => {
           intensity={0.77} // sepia intensity
           blendFunction={BlendFunction.SUBTRACT} // blend mode
         />
-        <Noise opacity={0.09} />
+        <Noise opacity={0.055} />
         <Vignette eskil={false} offset={0.1} darkness={1.07} />
 
         <Glitch
