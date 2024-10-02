@@ -14,7 +14,7 @@ import {
 
 import { BlendFunction } from 'postprocessing'
 
-import { Html, Icosahedron, useTexture, useCubeTexture, MeshDistortMaterial } from '@react-three/drei'
+import { Html, Icosahedron, useTexture, useCubeTexture, MeshDistortMaterial, CameraControls } from '@react-three/drei'
 
 import './style.css'
 
@@ -101,6 +101,7 @@ function Scene() {
 }
 
 export const Blob = () => {
+  const cameraControlRef = useRef()
   return (
     <Canvas
       camera={{ position: [0, 0, 3] }}
@@ -114,6 +115,8 @@ export const Blob = () => {
       <Suspense fallback={<Html center>Hatching the Eggs...</Html>}>
         <Scene />
       </Suspense>
+
+      <CameraControls ref={cameraControlRef} />
 
       <EffectComposer multisampling={0} disableNormalPass={true}>
         <DepthOfField focusDistance={0.0077} focalLength={0.02} bokehScale={8} height={480} />
@@ -132,7 +135,7 @@ export const Blob = () => {
           ratio={0.77} // Threshold for strong glitches, 0 - no weak glitches, 1 - no strong glitches.
           // blendFunction={}
           dtSize={128}
-          columns={0.21}
+          columns={0.01}
           // perturbationMap={'./glitch-texture.png'}
         />
 
@@ -145,6 +148,10 @@ export const Blob = () => {
       </EffectComposer>
 
       <color attach="background" args={['#070707']} />
+
+      {/*<color attach="background" args={['#ff55cc']} />*/}
+      {/*<color attach="background" args={['#090909']} />*/}
+      {/*<color attach="background" args={['#ffcc00']} />*/}
 
       <fog color="#131313" attach="fog" near={8} far={30} />
     </Canvas>
