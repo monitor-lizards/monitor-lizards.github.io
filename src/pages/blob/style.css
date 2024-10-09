@@ -1,3 +1,8 @@
+html::selection, body::selection, div::selection {
+  background: rgba(0, 0, 0, 0.89);
+  color: rgba(255, 255, 255, 0.89);
+}
+
 /* analyze this one - shout be triggered on resize */
 canvas {
   height: 100vh;
@@ -36,8 +41,20 @@ canvas {
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
-  }
+  }git
   to {
     transform: rotate(360deg);
   }
+}
+
+.s_pitch {
+  font-size: calc(10px + 1vmin);
+  position: absolute;
+  top: 66.6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 66.6vw;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0.89);
+  z-index: 1;
 }

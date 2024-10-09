@@ -103,58 +103,66 @@ function Scene() {
 export const Blob = () => {
   const cameraControlRef = useRef()
   return (
-    <Canvas
-      camera={{ position: [0, 0, 3] }}
-      gl={{
-        powerPreference: 'high-performance',
-        alpha: false,
-        antialias: false,
-        stencil: false,
-        depth: false,
-      }}>
-      <Suspense fallback={<Html center>Hatching the Eggs...</Html>}>
-        <Scene />
-      </Suspense>
+    <div className="s_wrapper">
+      <div className="s_pitch text-center">
+        Monitor Lizards is a young game dev collective based in the historic city of Kyїv, Ukraine. The first lizards
+        hatched in challenging times and walked their paths carefully with small steps. They've since grown strong and
+        resilient and come together to make unique interactive experiences, which some call games that they want to
+        play.
+      </div>
+      <Canvas
+        camera={{ position: [0, 0, 3] }}
+        gl={{
+          powerPreference: 'high-performance',
+          alpha: false,
+          antialias: false,
+          stencil: false,
+          depth: false,
+        }}>
+        <Suspense fallback={<Html center>Hatching the Eggs...</Html>}>
+          <Scene />
+        </Suspense>
 
-      <CameraControls ref={cameraControlRef} />
+        <CameraControls ref={cameraControlRef} />
 
-      <EffectComposer multisampling={0} disableNormalPass={true}>
-        <DepthOfField focusDistance={0.0077} focalLength={0.02} bokehScale={8} height={480} />
-        <Bloom intensity={1} luminanceThreshold={0.1} luminanceSmoothing={0.9} height={300} opacity={3} />
-        <Sepia
-          intensity={0.77} // sepia intensity
-          blendFunction={BlendFunction.SUBTRACT} // blend mode
-        />
-        <Noise opacity={0.055} />
-        <Vignette eskil={false} offset={0.1} darkness={1.07} />
+        <EffectComposer multisampling={0} disableNormalPass={true}>
+          <DepthOfField focusDistance={0.0077} focalLength={0.02} bokehScale={8} height={480} />
+          <Bloom intensity={1} luminanceThreshold={0.1} luminanceSmoothing={0.9} height={300} opacity={3} />
+          <Sepia
+            intensity={0.77} // sepia intensity
+            blendFunction={BlendFunction.SUBTRACT} // blend mode
+          />
+          <Noise opacity={0.055} />
+          <Vignette eskil={false} offset={0.1} darkness={1.07} />
 
-        <Glitch
-          delay={[13, 34]} // min and max glitch delay
-          duration={[0.5, 0.8]} // min and max glitch duration
-          strength={[0.2, 1.3]} // min and max glitch strength
-          ratio={0.77} // Threshold for strong glitches, 0 - no weak glitches, 1 - no strong glitches.
-          // blendFunction={}
-          dtSize={128}
-          columns={0.01}
-          // perturbationMap={'./glitch-texture.png'}
-        />
+          <Glitch
+            delay={[13, 34]} // min and max glitch delay
+            duration={[0.5, 0.8]} // min and max glitch duration
+            strength={[0.2, 1.3]} // min and max glitch strength
+            ratio={0.77} // Threshold for strong glitches, 0 - no weak glitches, 1 - no strong glitches.
+            // blendFunction={}
+            dtSize={128}
+            columns={0.01}
+            // perturbationMap={'./glitch-texture.png'}
+          />
 
-        <ChromaticAberration
-          // blendFunction={BlendFunction.NORMAL} // blend mode
-          // blendFunction={BlendFunction.SCREEN} // blend mode
-          blendFunction={BlendFunction.SUBTRACT} // blend mode
-          offset={[0.0021, 0.0034]} // color offset
-        />
-      </EffectComposer>
+          <ChromaticAberration
+            // blendFunction={BlendFunction.NORMAL} // blend mode
+            // blendFunction={BlendFunction.SCREEN} // blend mode
+            blendFunction={BlendFunction.SUBTRACT} // blend mode
+            offset={[0.0021, 0.0034]} // color offset
+          />
+        </EffectComposer>
 
-      <color attach="background" args={['#070707']} />
+        <color attach="background" args={['#070707']} />
 
-      {/*<color attach="background" args={['#ff55cc']} />*/}
-      {/*<color attach="background" args={['#090909']} />*/}
-      {/*<color attach="background" args={['#ffcc00']} />*/}
+        {/*<color attach="background" args={['#ff55cc']} />*/}
+        {/*<color attach="background" args={['#090909']} />*/}
+        {/*<color attach="background" args={['#ffcc00']} />*/}
 
-      <fog color="#131313" attach="fog" near={8} far={30} />
-    </Canvas>
+        <fog color="#131313" attach="fog" near={8} far={30} />
+      </Canvas>
+    </div>
   )
   // 050505
   // 161616
