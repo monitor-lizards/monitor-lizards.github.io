@@ -33,8 +33,8 @@ h1 { font-size: clamp(82px, 10.4vw, 166px); line-height: .92; letter-spacing: -.
 .board[data-state='ready'] .board-label { color: var(--accent); }
 .refresh { display: inline-flex; align-items: center; justify-content: center; gap: 11px; min-height: 44px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); padding: 10px 15px; font-size: 12px; flex: none; }
 .refresh:hover { border-color: var(--accent); color: var(--accent); }
-.refresh:disabled { opacity: .6; }
-.refresh:disabled:hover { color: var(--ink); border-color: var(--line); }
+.refresh[aria-disabled='true'] { opacity: .6; cursor: wait; }
+.refresh[aria-disabled='true']:hover { color: var(--ink); border-color: var(--line); }
 .refresh svg { stroke: currentColor; stroke-width: 1.25; fill: none; stroke-linecap: square; stroke-linejoin: miter; }
 .update-status { color: var(--muted); font-size: 13px; line-height: 1.5; padding-top: 14px; }
 .update-status:empty { display: none; }
