@@ -145,7 +145,8 @@
     async function refresh() {
       if (loading) return;
       loading = true;
-      elements.refresh.disabled = true;
+      // Keep keyboard focus while the single-flight guard blocks repeat requests.
+      elements.refresh.setAttribute('aria-disabled', 'true');
       elements['refresh-label'].textContent = 'Checking…';
       elements.board.setAttribute('aria-busy', 'true');
       state('loading', 'CHECKING VOYAGES', lastEntries === null ? 'Loading leaderboard.' : 'Checking for new voyages.');
@@ -194,7 +195,7 @@
         elements['refresh-label'].textContent = 'Try again';
       } finally {
         loading = false;
-        elements.refresh.disabled = false;
+        elements.refresh.setAttribute('aria-disabled', 'false');
         elements.board.setAttribute('aria-busy', 'false');
       }
     }
