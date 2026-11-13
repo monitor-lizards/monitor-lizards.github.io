@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#000000">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="The longest singleplayer voyages in A Boat To Die. Explore the jam leaderboard by nickname and distance travelled.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https: http://localhost:* http://127.0.0.1:*; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+    <title>A Boat To Die — Leaderboard · Monitor Lizards</title>
+    <link rel="canonical" href="https://monitorlizards.studio/a-boat-to-die/leaderboard/">
+    <link rel="preload" href="./assets/fonts/PryvidSans-Regular.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="./assets/fonts/RobochyiSans-Regular.otf" as="font" type="font/otf" crossorigin>
+    <link rel="stylesheet" href="./assets/studio.css">
+    <link rel="stylesheet" href="./assets/leaderboard.css">
+    <script src="./assets/studio.js" defer></script>
+    <script src="./assets/leaderboard.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#leaderboard">Skip to leaderboard</a>
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <a class="wordmark" href="/" aria-label="Monitor Lizards home">Monitor<span>Lizards</span></a>
+        <a class="back-link" href="/"><span aria-hidden="true">↖</span> Back to the studio</a>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="voyage-hero" aria-labelledby="game-title">
+        <div class="hero-labels mono">
+          <p><span class="accent">01 /</span> A BOAT TO DIE</p>
+          <p>SINGLEPLAYER · JAM LEADERBOARD</p>
+        </div>
+        <div class="voyage-title-grid">
+          <h1 id="game-title">A Boat<br>To Die<span class="title-period" aria-hidden="true">.</span></h1>
+          <div class="voyage-intro">
+            <p class="intro-heading">How far did<br> you make it?</p>
+            <p>The longest voyages, measured in kilometres. Each saved voyage has one record: its best distance.</p>
+          </div>
+        </div>
+        <div class="voyage-strip mono" aria-label="Leaderboard rules">
+          <p>ONE VOYAGE. YOUR BEST DISTANCE.</p>
+          <p>TOP 100 <span aria-hidden="true">↘</span></p>
+        </div>
+      </section>
+
+      <section id="leaderboard" class="leaderboard-section" aria-labelledby="leaderboard-title" tabindex="-1">
+        <div class="leaderboard-heading">
+          <p class="eyebrow"><span class="accent">02 /</span> THE LONGEST VOYAGES</p>
+          <h2 id="leaderboard-title">Leaderboard</h2>
+          <p class="board-description">Ranked by best distance.<br> Different voyages may share a nickname.</p>
+        </div>
+
+        <div id="board" class="board" data-state="preparing" aria-busy="false">
+          <div class="board-toolbar">
+            <p id="board-label" class="board-label mono">AWAITING VOYAGES</p>
+            <button id="refresh" class="refresh" type="button" hidden>
+              <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M16 8a6.2 6.2 0 1 0 .1 4M16 3v5h-5"/></svg>
+              <span id="refresh-label">Check again</span>
+            </button>
+          </div>
+
+          <p id="update-status" class="update-status" role="status" aria-live="polite" aria-atomic="true"></p>
+
+          <div id="state-panel" class="state-panel">
+            <p class="state-marker mono" id="state-marker">GETTING READY</p>
+            <h3 id="state-title">Leaderboard<br>preparing.</h3>
+            <p id="state-description">Shared voyages will appear here when the leaderboard opens.</p>
+          </div>
+
+          <div id="table-wrap" class="table-wrap" hidden>
+            <table>
+              <caption class="visually-hidden">Top singleplayer voyages, ranked by best distance in kilometres</caption>
+              <colgroup><col class="rank-column"><col><col class="distance-column"></colgroup>
+              <thead><tr><th scope="col">Rank</th><th scope="col">Nickname</th><th scope="col" class="distance-cell">Distance <span class="unit">/ km</span></th></tr></thead>
+              <tbody id="entries"></tbody>
+            </table>
+          </div>
+          <noscript><p class="no-script">Enable JavaScript to load shared scores. The game submits voyages; this page only displays them.</p></noscript>
+          <p class="board-footnote">Scores are shared from the game. Refresh to check for new voyages.</p>
+        </div>
+      </section>
+
+      <section class="privacy-section" aria-labelledby="privacy-title">
+        <div>
+          <p class="eyebrow"><span class="accent">03 /</span> YOUR VOYAGE, YOUR CHOICE</p>
+          <h2 id="privacy-title">A note on privacy</h2>
+        </div>
+        <div class="privacy-copy">
+          <p>Sharing is optional in the game. If you choose to share, your nickname and best distance become public here. Use a nickname you are comfortable making public.</p>
+          <p>This page has no accounts, analytics or cookies. The leaderboard uses Cloudflare, which may process connection metadata, such as your IP address, to deliver and protect the service. See <a href="https://www.cloudflare.com/privacypolicy/" rel="external noreferrer">Cloudflare’s privacy policy <span aria-hidden="true">↗</span></a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap leaderboard-footer">
+      <p>MONITOR LIZARDS<br><span>Independent games. Shared voyages.</span></p>
+      <a href="/">monitorlizards.studio <span aria-hidden="true">↗</span></a>
+    </footer>
+  </body>
+</html>
