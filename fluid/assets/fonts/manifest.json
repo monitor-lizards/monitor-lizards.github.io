@@ -1,0 +1,40 @@
+{
+  "source": "https://github.com/google/fonts/tree/06bfe0d62a98375cb09c942fa18e68bd32cff057/ofl",
+  "fonts": {
+    "ja": {
+      "source": "NotoSansJP.ttf",
+      "source_sha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
+      "sha256": "5aa085bed9747ae8f11a2e87f75488606a768d4c2c74d5084b596ad489cbd074",
+      "covered_codepoints": 118,
+      "license_notice": "NotoSansJP-OFL.txt"
+    },
+    "ko": {
+      "source": "NotoSansKR.ttf",
+      "source_sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+      "sha256": "f1b638f093dc2e963a4a3805795d4d5a246d0b0d1eb072672fe3e94d72940248",
+      "covered_codepoints": 113,
+      "license_notice": "NotoSansKR-OFL.txt"
+    },
+    "zh-Hans": {
+      "source": "NotoSansSC.ttf",
+      "source_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+      "sha256": "727301e7c7ac2974695e78a37890db0c94aa4581201c67b24eee52a688716f10",
+      "covered_codepoints": 106,
+      "license_notice": "NotoSansSC-OFL.txt"
+    },
+    "zh-Hant": {
+      "source": "NotoSansTC.ttf",
+      "source_sha256": "864727d210d54f2537bbe23b3a839436c3992af72de9322af5270897246bd44f",
+      "sha256": "2ad7e3d6404762c44b4c20f7c5a59dee1185b46981fd5e7c60f3550940cd7333",
+      "covered_codepoints": 111,
+      "license_notice": "NotoSansTC-OFL.txt"
+    },
+    "th": {
+      "source": "NotoSansThai.ttf",
+      "source_sha256": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8",
+      "sha256": "ac8f281fc34caf1d0e1ecb9c72ae0b1d59491c1d361e72e1f4b734ce0aa8a79b",
+      "covered_codepoints": 48,
+      "license_notice": "NotoSansThai-OFL.txt"
+    }
+  }
+}

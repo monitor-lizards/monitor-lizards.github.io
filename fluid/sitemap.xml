@@ -1,1 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://monitorlizards.studio/fluid/</loc></url><url><loc>https://monitorlizards.studio/fluid/guide/</loc></url><url><loc>https://monitorlizards.studio/fluid/research/</loc></url><url><loc>https://monitorlizards.studio/fluid/support/</loc></url><url><loc>https://monitorlizards.studio/fluid/privacy/</loc></url><url><loc>https://monitorlizards.studio/fluid/roadmap/</loc></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://monitorlizards.studio/fluid/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/guide/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/research/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/privacy/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/support/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/roadmap/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/uk/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/de/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/fr/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/es-ES/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/es-419/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/pt-BR/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/it/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/pl/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/tr/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/ja/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/ko/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/zh-Hans/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/zh-Hant/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/th/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/cs/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/hu/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/pt-PT/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/nl/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/ro/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/da/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/fi/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/is/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/nb/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/sv/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/id/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/vi/</loc></url>
+  <url><loc>https://monitorlizards.studio/fluid/ru/</loc></url>
+</urlset>
