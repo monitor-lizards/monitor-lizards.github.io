@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#000000">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; font-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
 <title>Fluid: Dual N-Back · Her seferinde bir tur.</title>
 <meta name="description" content="Çalışma belleğine yönelik bir alıştırma olan ikili n-back’i dene. Konumları ve duyduğun harfleri n adım öncekiyle eşleştir. Sonuçlarına göre değişen zorluk, isteğe bağlı dersler ve ilerleme grafikleriyle kendi hızında alıştırma yap.">
 <link rel="canonical" href="https://monitorlizards.studio/fluid/tr/">
@@ -34,28 +34,31 @@
 <link rel="alternate" hreflang="sv" href="https://monitorlizards.studio/fluid/sv/">
 <link rel="alternate" hreflang="id" href="https://monitorlizards.studio/fluid/id/">
 <link rel="alternate" hreflang="vi" href="https://monitorlizards.studio/fluid/vi/">
+<link rel="alternate" hreflang="ru" href="https://monitorlizards.studio/fluid/ru/">
 <link rel="alternate" hreflang="x-default" href="https://monitorlizards.studio/fluid/">
 <meta property="og:type" content="website"><meta property="og:title" content="Fluid: Dual N-Back · Her seferinde bir tur.">
 <meta property="og:description" content="Çalışma belleğine yönelik bir alıştırma olan ikili n-back’i dene. Konumları ve duyduğun harfleri n adım öncekiyle eşleştir. Sonuçlarına göre değişen zorluk, isteğe bağlı dersler ve ilerleme grafikleriyle kendi hızında alıştırma yap.">
 <meta property="og:url" content="https://monitorlizards.studio/fluid/tr/">
 <meta property="og:image" content="https://monitorlizards.studio/fluid/assets/social.png">
 <link rel="icon" href="/fluid/assets/icon.png">
-<link rel="stylesheet" href="/fluid/assets/site.css">
+<link rel="stylesheet" href="/fluid/assets/site.css?v=20261125">
+<script src="/fluid/assets/site.js?v=20261125" defer></script>
 </head><body class="localized-landing">
 <a class="skip" href="#main">İçeriğe geç</a>
 <div class="wrap">
 <header class="topbar">
 <a class="wordmark" href="/fluid/tr/"><img src="/fluid/assets/fluid.svg" width="66" height="40" alt="Fluid"></a>
 <nav><a href="#get-fluid">Fluid’i edin</a></nav>
-<details class="language-picker"><summary>Dil</summary><ul><li><a href="/fluid/" lang="en" hreflang="en">English</a></li><li><a href="/fluid/uk/" lang="uk" hreflang="uk">Українська</a></li><li><a href="/fluid/de/" lang="de" hreflang="de">Deutsch</a></li><li><a href="/fluid/fr/" lang="fr" hreflang="fr">Français</a></li><li><a href="/fluid/es-ES/" lang="es-ES" hreflang="es-ES">Español (España)</a></li><li><a href="/fluid/es-419/" lang="es-419" hreflang="es-419">Español (Latinoamérica)</a></li><li><a href="/fluid/pt-BR/" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a></li><li><a href="/fluid/it/" lang="it" hreflang="it">Italiano</a></li><li><a href="/fluid/pl/" lang="pl" hreflang="pl">Polski</a></li><li><a href="/fluid/tr/" lang="tr" hreflang="tr" aria-current="page">Türkçe</a></li><li><a href="/fluid/ja/" lang="ja" hreflang="ja">日本語</a></li><li><a href="/fluid/ko/" lang="ko" hreflang="ko">한국어</a></li><li><a href="/fluid/zh-Hans/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></li><li><a href="/fluid/zh-Hant/" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a></li><li><a href="/fluid/th/" lang="th" hreflang="th">ไทย</a></li><li><a href="/fluid/cs/" lang="cs" hreflang="cs">Čeština</a></li><li><a href="/fluid/hu/" lang="hu" hreflang="hu">Magyar</a></li><li><a href="/fluid/pt-PT/" lang="pt-PT" hreflang="pt-PT">Português (Portugal)</a></li><li><a href="/fluid/nl/" lang="nl" hreflang="nl">Nederlands</a></li><li><a href="/fluid/ro/" lang="ro" hreflang="ro">Română</a></li><li><a href="/fluid/da/" lang="da" hreflang="da">Dansk</a></li><li><a href="/fluid/fi/" lang="fi" hreflang="fi">Suomi</a></li><li><a href="/fluid/is/" lang="is" hreflang="is">Íslenska</a></li><li><a href="/fluid/nb/" lang="nb" hreflang="nb">Norsk bokmål</a></li><li><a href="/fluid/sv/" lang="sv" hreflang="sv">Svenska</a></li><li><a href="/fluid/id/" lang="id" hreflang="id">Bahasa Indonesia</a></li><li><a href="/fluid/vi/" lang="vi" hreflang="vi">Tiếng Việt</a></li></ul></details>
+<details class="language-picker"><summary>Dil</summary><ul><li><a href="/fluid/" lang="en" hreflang="en">English</a></li><li><a href="/fluid/uk/" lang="uk" hreflang="uk">Українська</a></li><li><a href="/fluid/de/" lang="de" hreflang="de">Deutsch</a></li><li><a href="/fluid/fr/" lang="fr" hreflang="fr">Français</a></li><li><a href="/fluid/es-ES/" lang="es-ES" hreflang="es-ES">Español (España)</a></li><li><a href="/fluid/es-419/" lang="es-419" hreflang="es-419">Español (Latinoamérica)</a></li><li><a href="/fluid/pt-BR/" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a></li><li><a href="/fluid/it/" lang="it" hreflang="it">Italiano</a></li><li><a href="/fluid/pl/" lang="pl" hreflang="pl">Polski</a></li><li><a href="/fluid/tr/" lang="tr" hreflang="tr" aria-current="page">Türkçe</a></li><li><a href="/fluid/ja/" lang="ja" hreflang="ja">日本語</a></li><li><a href="/fluid/ko/" lang="ko" hreflang="ko">한국어</a></li><li><a href="/fluid/zh-Hans/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></li><li><a href="/fluid/zh-Hant/" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a></li><li><a href="/fluid/th/" lang="th" hreflang="th">ไทย</a></li><li><a href="/fluid/cs/" lang="cs" hreflang="cs">Čeština</a></li><li><a href="/fluid/hu/" lang="hu" hreflang="hu">Magyar</a></li><li><a href="/fluid/pt-PT/" lang="pt-PT" hreflang="pt-PT">Português (Portugal)</a></li><li><a href="/fluid/nl/" lang="nl" hreflang="nl">Nederlands</a></li><li><a href="/fluid/ro/" lang="ro" hreflang="ro">Română</a></li><li><a href="/fluid/da/" lang="da" hreflang="da">Dansk</a></li><li><a href="/fluid/fi/" lang="fi" hreflang="fi">Suomi</a></li><li><a href="/fluid/is/" lang="is" hreflang="is">Íslenska</a></li><li><a href="/fluid/nb/" lang="nb" hreflang="nb">Norsk bokmål</a></li><li><a href="/fluid/sv/" lang="sv" hreflang="sv">Svenska</a></li><li><a href="/fluid/id/" lang="id" hreflang="id">Bahasa Indonesia</a></li><li><a href="/fluid/vi/" lang="vi" hreflang="vi">Tiếng Việt</a></li><li><a href="/fluid/ru/" lang="ru" hreflang="ru">Русский</a></li></ul></details>
 </header>
 <main id="main">
 <section class="hero">
 <div class="hero-copy"><p class="eyebrow">Fluid · Dual N-Back</p>
 <h1>Her seferinde bir tur.</h1>
 <p class="lede">Çalışma belleğine yönelik bir alıştırma olan ikili n-back’i dene. Konumları ve duyduğun harfleri n adım öncekiyle eşleştir. Sonuçlarına göre değişen zorluk, isteğe bağlı dersler ve ilerleme grafikleriyle kendi hızında alıştırma yap.</p>
-<div class="actions"><a class="button primary" href="#get-fluid">Fluid’i edin <span aria-hidden="true">↓</span></a></div></div>
-<div class="composition" aria-hidden="true"><svg viewBox="0 0 600 580" role="presentation">
+<div class="actions"><a class="button primary" href="#get-fluid">Fluid’i edin <span aria-hidden="true">↓</span></a></div>
+<button class="motion-control" type="button" data-motion-toggle aria-pressed="false" disabled>Arka plan animasyonu</button></div>
+<div class="composition" data-composition><svg viewBox="0 0 600 580" aria-hidden="true" focusable="false">
 <defs><linearGradient id="fluid-shade" x1=".1" y1="0" x2=".9" y2="1"><stop stop-color="#272727"/><stop offset="1" stop-color="#0b0b0b"/></linearGradient></defs>
 <g fill="none" stroke="#8c8c8c" stroke-width="1.15" stroke-linecap="round">
 <ellipse data-ring cx="300" cy="286" rx="220" ry="208" pathLength="1"/>
@@ -64,9 +67,7 @@
 <ellipse data-ring cx="300" cy="286" rx="277" ry="247" pathLength="1"/>
 <ellipse data-ring cx="300" cy="286" rx="296" ry="260" pathLength="1"/></g>
 <path data-blob d="M 482 286 C 520 398 388 494 279 479 C 142 470 78 345 115 244 C 147 124 283 66 383 112 C 442 130 457 218 482 286 Z" fill="url(#fluid-shade)"/>
-<g fill="#555"><circle cx="220" cy="205" r="3"/><circle cx="300" cy="205" r="3"/><circle cx="380" cy="205" r="3"/><circle cx="220" cy="285" r="3"/><circle cx="380" cy="285" r="3"/><circle cx="220" cy="365" r="3"/><circle cx="300" cy="365" r="3"/></g>
-<path d="M 291 285 H 309 M 300 276 V 294" stroke="#777" stroke-width="2" stroke-linecap="round"/>
-<circle cx="380" cy="365" r="27" fill="#d6d6d6"/></svg></div>
+</svg><div class="playfield" role="group" aria-label="Bir konum seç"><button class="playfield-position" type="button" disabled data-playfield-position="0 0" aria-label="Konum 1" aria-pressed="false"></button><button class="playfield-position" type="button" disabled data-playfield-position="0 1" aria-label="Konum 2" aria-pressed="false"></button><button class="playfield-position" type="button" disabled data-playfield-position="0 2" aria-label="Konum 3" aria-pressed="false"></button><button class="playfield-position" type="button" disabled data-playfield-position="1 0" aria-label="Konum 4" aria-pressed="false"></button><span aria-hidden="true"></span><button class="playfield-position" type="button" disabled data-playfield-position="1 2" aria-label="Konum 5" aria-pressed="false"></button><button class="playfield-position" type="button" disabled data-playfield-position="2 0" aria-label="Konum 6" aria-pressed="false"></button><button class="playfield-position" type="button" disabled data-playfield-position="2 1" aria-label="Konum 7" aria-pressed="false"></button><button class="playfield-position" type="button" disabled data-playfield-position="2 2" aria-label="Konum 8" aria-pressed="true"></button><span class="playfield-cue" data-playfield-cue data-row="2" data-column="2" aria-hidden="true"><svg viewBox="0 0 54 54" focusable="false"><circle cx="27" cy="27" r="27" fill="#d6d6d6"/></svg></span></div><div class="art-caption"><span>Bir konum seç</span></div></div>
 </section>
 <div class="strip"><span>KLASİK ALIŞTIRMA</span><span>Konum</span><span>Ses</span><span>İlerleme</span></div>
 <section class="section" id="the-practice"><div class="section-head"><h2>Öğren</h2><p>Konumla başla, sesi ekle, sonra ikisini bir araya getir.</p></div>

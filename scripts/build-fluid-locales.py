@@ -13,6 +13,7 @@ FLUID = ROOT / "public/fluid"
 BASE = "https://monitorlizards.studio"
 COPY = json.loads(Path(__file__).with_name("fluid-site-copy.json").read_text())
 ENGLISH_PAGES = ("", "guide", "research", "privacy", "support", "roadmap")
+ASSET_VERSION = "20261125"
 
 
 def route(tag):
@@ -26,6 +27,15 @@ def alternates():
     ]
     links.append(f'<link rel="alternate" hreflang="x-default" href="{BASE}/fluid/">')
     return "\n".join(links)
+
+
+def sitemap():
+    pages = ["/fluid/" + (page + "/" if page else "") for page in ENGLISH_PAGES]
+    pages.extend(route(tag) for tag in COPY if tag != "en")
+    urls = "\n".join(f"  <url><loc>{BASE}{page}</loc></url>" for page in pages)
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            f'{urls}\n</urlset>\n')
 
 
 def switcher(tag, *, landing=True):
@@ -53,6 +63,43 @@ def replace_region(html, name, value, marker):
     return html.replace(marker, region + "\n" + marker, 1)
 
 
+def motion_control(tag):
+    label = escape(COPY[tag]["backgroundMotion"])
+    return (
+        '<button class="motion-control" type="button" data-motion-toggle '
+        f'aria-pressed="false" disabled>{label}</button>'
+    )
+
+
+def hero_composition(tag, svg):
+    hint = escape(COPY[tag]["playfieldHint"], quote=True)
+    position = escape(COPY[tag]["position"], quote=True)
+    controls = []
+    number = 0
+    for row in range(3):
+        for column in range(3):
+            if (row, column) == (1, 1):
+                controls.append('<span aria-hidden="true"></span>')
+                continue
+            active = (row, column) == (2, 2)
+            number += 1
+            controls.append(
+                '<button class="playfield-position" type="button" disabled '
+                f'data-playfield-position="{row} {column}" '
+                f'aria-label="{position} {number}" aria-pressed="{str(active).lower()}"></button>'
+            )
+    caption = '<span>IN THE PRESENT. N STEPS BACK.</span>' if tag == "en" else ""
+    return (
+        f'<div class="composition" data-composition>{svg}'
+        f'<div class="playfield" role="group" aria-label="{hint}">'
+        f'{"".join(controls)}'
+        '<span class="playfield-cue" data-playfield-cue data-row="2" data-column="2" '
+        'aria-hidden="true"><svg viewBox="0 0 54 54" focusable="false">'
+        '<circle cx="27" cy="27" r="27" fill="#d6d6d6"/></svg></span></div>'
+        f'<div class="art-caption"><span>{hint}</span>{caption}</div></div>'
+    )
+
+
 def localized_page(tag, original_svg):
     data = COPY[tag]
     label = {key: escape(value, quote=True) for key, value in data.items()}
@@ -68,7 +115,7 @@ def localized_page(tag, original_svg):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#000000">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; font-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
 <title>{title}</title>
 <meta name="description" content="{label['description']}">
 <link rel="canonical" href="{canonical}">
@@ -78,7 +125,8 @@ def localized_page(tag, original_svg):
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{BASE}/fluid/assets/social.png">
 <link rel="icon" href="/fluid/assets/icon.png">
-<link rel="stylesheet" href="/fluid/assets/site.css">
+<link rel="stylesheet" href="/fluid/assets/site.css?v={ASSET_VERSION}">
+<script src="/fluid/assets/site.js?v={ASSET_VERSION}" defer></script>
 </head><body class="localized-landing">
 <a class="skip" href="#main">{label['skip']}</a>
 <div class="wrap">
@@ -92,8 +140,9 @@ def localized_page(tag, original_svg):
 <div class="hero-copy"><p class="eyebrow">Fluid · Dual N-Back</p>
 <h1>{label['title']}</h1>
 <p class="lede">{label['description']}</p>
-<div class="actions"><a class="button primary" href="#get-fluid">{label['get']} <span aria-hidden="true">↓</span></a></div></div>
-<div class="composition" aria-hidden="true">{original_svg}</div>
+<div class="actions"><a class="button primary" href="#get-fluid">{label['get']} <span aria-hidden="true">↓</span></a></div>
+{motion_control(tag)}</div>
+{hero_composition(tag, original_svg)}
 </section>
 <div class="strip"><span>{label['practice']}</span><span>{label['position']}</span><span>{label['sound']}</span><span>{label['progress']}</span></div>
 <section class="section" id="the-practice"><div class="section-head"><h2>{label['learn']}</h2><p>{label['learnIntro']}</p></div>
@@ -115,9 +164,20 @@ def main():
     for page in ENGLISH_PAGES:
         path = FLUID / page / "index.html"
         html = path.read_text()
+        html = re.sub(r'site\.css(?:\?v=\d+)?"', f'site.css?v={ASSET_VERSION}"', html)
         if page == "":
             start = html.index('<div class="composition"')
             svg = re.search(r'<svg\b.*?</svg>', html[start:], re.S).group()
+            composition = hero_composition("en", svg)
+            if '<!-- fluid-hero-composition -->' in html:
+                html = replace_region(html, "fluid-hero-composition", composition, "</section>")
+            else:
+                end = html.index("</section>", start)
+                html = (html[:start] + '<!-- fluid-hero-composition -->\n' + composition
+                        + '\n<!-- /fluid-hero-composition -->\n' + html[end:])
+            html = re.sub(r'site\.js(?:\?v=\d+)?"', f'site.js?v={ASSET_VERSION}"', html)
+            html = re.sub(r'<button\b[^>]*\bdata-motion-toggle\b[^>]*>.*?</button>',
+                          lambda _: motion_control("en"), html, count=1)
             html = replace_region(html, "fluid-alternate-links", alternates(), "</head>")
         html = replace_region(
             html, "fluid-language-switch", switcher("en", landing=not page), "</header>"
@@ -126,6 +186,7 @@ def main():
     for tag in COPY:
         if tag != "en":
             expected[FLUID / tag / "index.html"] = localized_page(tag, svg)
+    expected[FLUID / "sitemap.xml"] = sitemap()
     for path, content in expected.items():
         if args.check:
             if not path.exists() or path.read_text() != content:
@@ -133,7 +194,7 @@ def main():
         else:
             path.parent.mkdir(exist_ok=True)
             path.write_text(content)
-    print(f"{len(COPY)} language options; {len(expected)} pages checked")
+    print(f"{len(COPY)} language options; {len(expected) - 1} pages and sitemap checked")
 
 
 if __name__ == "__main__":

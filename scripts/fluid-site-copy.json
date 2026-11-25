@@ -9,7 +9,10 @@
     "support": "Support",
     "get": "Get Fluid",
     "soon": "Coming soon",
-    "english": "English"
+    "english": "English",
+    "position": "Position",
+    "playfieldHint": "Choose a position",
+    "backgroundMotion": "Background motion"
   },
   "uk": {
     "native": "Українська",
@@ -29,7 +32,9 @@
     "learnIntro": "Почніть із позиції, додайте звук, а потім поєднайте їх.",
     "progress": "Прогрес",
     "position": "Позиція",
-    "sound": "Звук"
+    "sound": "Звук",
+    "playfieldHint": "Обери позицію",
+    "backgroundMotion": "Анімація тла"
   },
   "de": {
     "native": "Deutsch",
@@ -49,7 +54,9 @@
     "learnIntro": "Beginne mit einer Position, nimm einen Ton dazu und verbinde dann beides.",
     "progress": "Fortschritt",
     "position": "Position",
-    "sound": "Ton"
+    "sound": "Ton",
+    "playfieldHint": "Wähle eine Position",
+    "backgroundMotion": "Hintergrundanimation"
   },
   "fr": {
     "native": "Français",
@@ -69,7 +76,9 @@
     "learnIntro": "Commencez par la position, ajoutez le son, puis combinez les deux.",
     "progress": "Progression",
     "position": "Position",
-    "sound": "Son"
+    "sound": "Son",
+    "playfieldHint": "Choisis une position",
+    "backgroundMotion": "Animation de fond"
   },
   "es-ES": {
     "native": "Español (España)",
@@ -89,7 +98,9 @@
     "learnIntro": "Empieza con una posición, añade un sonido y después combina los dos.",
     "progress": "Progreso",
     "position": "Posición",
-    "sound": "Sonido"
+    "sound": "Sonido",
+    "playfieldHint": "Elige una posición",
+    "backgroundMotion": "Animación de fondo"
   },
   "es-419": {
     "native": "Español (Latinoamérica)",
@@ -109,7 +120,9 @@
     "learnIntro": "Empieza con una posición, agrega un sonido y luego combina los dos.",
     "progress": "Progreso",
     "position": "Posición",
-    "sound": "Sonido"
+    "sound": "Sonido",
+    "playfieldHint": "Elige una posición",
+    "backgroundMotion": "Animación de fondo"
   },
   "pt-BR": {
     "native": "Português (Brasil)",
@@ -129,7 +142,9 @@
     "learnIntro": "Comece com uma posição, acrescente um som e depois combine os dois.",
     "progress": "Progresso",
     "position": "Posição",
-    "sound": "Som"
+    "sound": "Som",
+    "playfieldHint": "Escolha uma posição",
+    "backgroundMotion": "Animação de fundo"
   },
   "it": {
     "native": "Italiano",
@@ -149,7 +164,9 @@
     "learnIntro": "Inizia con una posizione, aggiungi un suono e poi combinali.",
     "progress": "Progressi",
     "position": "Posizione",
-    "sound": "Suono"
+    "sound": "Suono",
+    "playfieldHint": "Scegli una posizione",
+    "backgroundMotion": "Animazione di sfondo"
   },
   "pl": {
     "native": "Polski",
@@ -169,7 +186,9 @@
     "learnIntro": "Zacznij od pozycji, dodaj dźwięk, a potem połącz obie sekwencje.",
     "progress": "Postępy",
     "position": "Pozycja",
-    "sound": "Dźwięk"
+    "sound": "Dźwięk",
+    "playfieldHint": "Wybierz pozycję",
+    "backgroundMotion": "Animacja tła"
   },
   "tr": {
     "native": "Türkçe",
@@ -189,7 +208,9 @@
     "learnIntro": "Konumla başla, sesi ekle, sonra ikisini bir araya getir.",
     "progress": "İlerleme",
     "position": "Konum",
-    "sound": "Ses"
+    "sound": "Ses",
+    "playfieldHint": "Bir konum seç",
+    "backgroundMotion": "Arka plan animasyonu"
   },
   "ja": {
     "native": "日本語",
@@ -209,7 +230,9 @@
     "learnIntro": "位置から始め、音声を加えて、最後に両方を追います。",
     "progress": "進捗",
     "position": "位置",
-    "sound": "音声"
+    "sound": "音声",
+    "playfieldHint": "位置を選ぶ",
+    "backgroundMotion": "背景のアニメーション"
   },
   "ko": {
     "native": "한국어",
@@ -229,7 +252,9 @@
     "learnIntro": "위치부터 익히고 소리를 더한 뒤, 두 가지를 함께 따라가세요.",
     "progress": "진행 상황",
     "position": "위치",
-    "sound": "소리"
+    "sound": "소리",
+    "playfieldHint": "위치를 선택하세요",
+    "backgroundMotion": "배경 애니메이션"
   },
   "zh-Hans": {
     "native": "简体中文",
@@ -249,7 +274,9 @@
     "learnIntro": "先练位置，再加上声音，最后同时留意两组线索。",
     "progress": "进度",
     "position": "位置",
-    "sound": "声音"
+    "sound": "声音",
+    "playfieldHint": "选择一个位置",
+    "backgroundMotion": "背景动画"
   },
   "zh-Hant": {
     "native": "繁體中文",
@@ -269,7 +296,9 @@
     "learnIntro": "先練位置，再加入聲音，最後同時留意兩組線索。",
     "progress": "進度",
     "position": "位置",
-    "sound": "聲音"
+    "sound": "聲音",
+    "playfieldHint": "選擇一個位置",
+    "backgroundMotion": "背景動畫"
   },
   "th": {
     "native": "ไทย",
@@ -289,7 +318,9 @@
     "learnIntro": "เริ่มจากดูตำแหน่ง แล้วเพิ่มเสียง ก่อนฝึกติดตามทั้งสองอย่างพร้อมกัน",
     "progress": "ความคืบหน้า",
     "position": "ตำแหน่ง",
-    "sound": "เสียง"
+    "sound": "เสียง",
+    "playfieldHint": "เลือกตำแหน่ง",
+    "backgroundMotion": "ภาพเคลื่อนไหวพื้นหลัง"
   },
   "cs": {
     "native": "Čeština",
@@ -309,7 +340,9 @@
     "sound": "Zvuk",
     "progress": "Pokrok",
     "learn": "Naučit se cvičení",
-    "learnIntro": "Začněte polohou, přidejte zvuk a pak je spojte."
+    "learnIntro": "Začněte polohou, přidejte zvuk a pak je spojte.",
+    "playfieldHint": "Vyber polohu",
+    "backgroundMotion": "Animace pozadí"
   },
   "hu": {
     "native": "Magyar",
@@ -329,7 +362,9 @@
     "sound": "Hang",
     "progress": "Haladás",
     "learn": "A gyakorlat megtanulása",
-    "learnIntro": "Kezdd a hellyel, add hozzá a hangot, majd figyelj mindkettőre."
+    "learnIntro": "Kezdd a hellyel, add hozzá a hangot, majd figyelj mindkettőre.",
+    "playfieldHint": "Válassz egy helyet",
+    "backgroundMotion": "Háttéranimáció"
   },
   "pt-PT": {
     "native": "Português (Portugal)",
@@ -349,7 +384,9 @@
     "sound": "Som",
     "progress": "Progresso",
     "learn": "Aprender o exercício",
-    "learnIntro": "Comece com uma posição, junte um som e depois combine os dois."
+    "learnIntro": "Comece com uma posição, junte um som e depois combine os dois.",
+    "playfieldHint": "Escolhe uma posição",
+    "backgroundMotion": "Animação de fundo"
   },
   "nl": {
     "native": "Nederlands",
@@ -369,7 +406,9 @@
     "sound": "Geluid",
     "progress": "Voortgang",
     "learn": "De oefening leren",
-    "learnIntro": "Begin met een positie, voeg een geluid toe en combineer ze."
+    "learnIntro": "Begin met een positie, voeg een geluid toe en combineer ze.",
+    "playfieldHint": "Kies een positie",
+    "backgroundMotion": "Achtergrondanimatie"
   },
   "ro": {
     "native": "Română",
@@ -389,7 +428,9 @@
     "sound": "Sunet",
     "progress": "Progres",
     "learn": "Învață exercițiul",
-    "learnIntro": "Începe cu poziția, adaugă sunetul, apoi urmărește-le împreună."
+    "learnIntro": "Începe cu poziția, adaugă sunetul, apoi urmărește-le împreună.",
+    "playfieldHint": "Alege o poziție",
+    "backgroundMotion": "Animație de fundal"
   },
   "da": {
     "native": "Dansk",
@@ -409,7 +450,9 @@
     "sound": "Lyd",
     "progress": "Fremskridt",
     "learn": "Lær øvelsen",
-    "learnIntro": "Start med en position, tilføj en lyd, og kombinér dem så."
+    "learnIntro": "Start med en position, tilføj en lyd, og kombinér dem så.",
+    "playfieldHint": "Vælg en position",
+    "backgroundMotion": "Baggrundsanimation"
   },
   "fi": {
     "native": "Suomi",
@@ -429,7 +472,9 @@
     "sound": "Ääni",
     "progress": "Edistyminen",
     "learn": "Opi harjoitus",
-    "learnIntro": "Aloita sijainnista, lisää ääni ja yhdistä ne sitten."
+    "learnIntro": "Aloita sijainnista, lisää ääni ja yhdistä ne sitten.",
+    "playfieldHint": "Valitse sijainti",
+    "backgroundMotion": "Taustaliike"
   },
   "is": {
     "native": "Íslenska",
@@ -449,7 +494,9 @@
     "sound": "Hljóð",
     "progress": "Framfarir",
     "learn": "Lærðu æfinguna",
-    "learnIntro": "Byrjaðu á staðsetningu, bættu hljóði við og notaðu svo hvort tveggja."
+    "learnIntro": "Byrjaðu á staðsetningu, bættu hljóði við og notaðu svo hvort tveggja.",
+    "playfieldHint": "Veldu staðsetningu",
+    "backgroundMotion": "Hreyfing í bakgrunni"
   },
   "nb": {
     "native": "Norsk bokmål",
@@ -469,7 +516,9 @@
     "sound": "Lyd",
     "progress": "Fremgang",
     "learn": "Lær øvelsen",
-    "learnIntro": "Begynn med posisjon, legg til lyd, og kombiner dem til slutt."
+    "learnIntro": "Begynn med posisjon, legg til lyd, og kombiner dem til slutt.",
+    "playfieldHint": "Velg en posisjon",
+    "backgroundMotion": "Bakgrunnsanimasjon"
   },
   "sv": {
     "native": "Svenska",
@@ -489,7 +538,9 @@
     "sound": "Ljud",
     "progress": "Framsteg",
     "learn": "Lär dig övningen",
-    "learnIntro": "Börja med en position, lägg till ett ljud och sätt sedan ihop dem."
+    "learnIntro": "Börja med en position, lägg till ett ljud och sätt sedan ihop dem.",
+    "playfieldHint": "Välj en position",
+    "backgroundMotion": "Bakgrundsanimering"
   },
   "id": {
     "native": "Bahasa Indonesia",
@@ -509,7 +560,9 @@
     "sound": "Suara",
     "progress": "Progres",
     "learn": "Pelajari latihannya",
-    "learnIntro": "Mulai dengan satu posisi, tambahkan suara, lalu gabungkan keduanya."
+    "learnIntro": "Mulai dengan satu posisi, tambahkan suara, lalu gabungkan keduanya.",
+    "playfieldHint": "Pilih posisi",
+    "backgroundMotion": "Animasi latar"
   },
   "vi": {
     "native": "Tiếng Việt",
@@ -529,6 +582,30 @@
     "sound": "Âm thanh",
     "progress": "Tiến độ",
     "learn": "Tìm hiểu bài tập",
-    "learnIntro": "Bắt đầu với vị trí, thêm âm thanh rồi kết hợp cả hai."
+    "learnIntro": "Bắt đầu với vị trí, thêm âm thanh rồi kết hợp cả hai.",
+    "playfieldHint": "Chọn một vị trí",
+    "backgroundMotion": "Chuyển động nền"
+  },
+  "ru": {
+    "native": "Русский",
+    "language": "Язык",
+    "skip": "Перейти к содержанию",
+    "guide": "Как играть",
+    "research": "Исследования",
+    "privacy": "Политика конфиденциальности",
+    "support": "Поддержка",
+    "get": "Получить Fluid",
+    "soon": "Скоро",
+    "english": "по-английски",
+    "title": "По раунду за раз.",
+    "description": "Двойной n-back — упражнение для рабочей памяти. Отмечай позиции и произнесённые буквы, которые повторяются через n шагов. Сложность подстраивается под твои результаты. Освой правила на коротких уроках и следи за прогрессом на графиках.",
+    "practice": "ТРЕНИРОВКА / КЛАССИКА",
+    "learn": "Обучение",
+    "learnIntro": "Начни с позиции, добавь звук, а затем следи за ними одновременно. Латинские буквы озвучены на английском.",
+    "progress": "Прогресс",
+    "position": "Позиция",
+    "sound": "Звук",
+    "playfieldHint": "Выбери позицию",
+    "backgroundMotion": "Анимация фона"
   }
 }

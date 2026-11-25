@@ -3,6 +3,21 @@
   const button = document.querySelector('[data-motion-toggle]');
   const art = document.querySelector('[data-composition]');
   if (!button || !art) return;
+  const cue = art.querySelector('[data-playfield-cue]');
+  const positions = [...art.querySelectorAll('[data-playfield-position]')];
+  let activePosition = positions.find(position => position.getAttribute('aria-pressed') === 'true');
+  for (const position of positions) {
+    position.disabled = false;
+    position.addEventListener('click', () => {
+      if (position === activePosition) return;
+      activePosition.setAttribute('aria-pressed', 'false');
+      position.setAttribute('aria-pressed', 'true');
+      activePosition = position;
+      const [row, column] = position.dataset.playfieldPosition.split(' ');
+      cue.dataset.row = row;
+      cue.dataset.column = column;
+    });
+  }
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   let userPaused = false;
   try { userPaused = localStorage.getItem('fluid-site-motion') === 'paused'; } catch (_) {}
@@ -50,9 +65,9 @@
   function running() { return !userPaused && !reduced.matches && !document.hidden && visible; }
   function sync() {
     cancelAnimationFrame(frame); frame = 0; last = 0;
-    button.textContent = reduced.matches ? 'Motion off · system preference' : userPaused ? 'Play gentle motion' : 'Pause motion';
     button.setAttribute('aria-pressed', String(!userPaused && !reduced.matches));
     button.disabled = reduced.matches;
+    art.toggleAttribute('data-motion-paused', userPaused);
     if (running()) frame = requestAnimationFrame(animate);
   }
   button.addEventListener('click', () => {
